@@ -13,7 +13,7 @@
           <img src="{{ asset('assets/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">{{ auth()->user()->name }}</a>
+          <a href="{{ route('profile') }}" class="d-block">{{ auth()->user()->name }}</a>
         </div>
       </div>
 
@@ -59,86 +59,6 @@
               </li>
             </ul>
           </li>
-          {{-- <li class="nav-item">
-            <a href="#" class="nav-link @if(Route::currentRouteName() === 'event.photo-index' || Route::currentRouteName() === 'event.video-index') active @endif">
-              <i class="nav-icon fas fa-folder"></i>
-              <p>
-                Event
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{ route('event.photo-index') }}" class="nav-link @if(Route::currentRouteName() === 'event.photo-index') active @endif">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Galeri Foto</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('event.video-index') }}" class="nav-link @if(Route::currentRouteName() === 'event.video-index') active @endif">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Galeri Video</p>
-                </a>
-              </li>
-            </ul>
-          </li> --}}
-          {{-- <li class="nav-item">
-            <a href="#" class="nav-link link @if(Route::currentRouteName() === 'event.photo-index' || Route::currentRouteName() === 'event.video-index') active @endif">
-              <i class="nav-icon fas fa-folder"></i>
-              <p>
-                Event
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>
-                    Event Kami
-                    <i class="right fas fa-angle-left"></i>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="far fa-dot-circle nav-icon"></i>
-                      <p>Galeri Foto</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="far fa-dot-circle nav-icon"></i>
-                      <p>Galeri Video</p>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>
-                    Kolaborasi Event
-                    <i class="right fas fa-angle-left"></i>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="far fa-dot-circle nav-icon"></i>
-                      <p>Galeri Foto</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="far fa-dot-circle nav-icon"></i>
-                      <p>Galeri Video</p>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li> --}}
           <li class="nav-item">
             <a href="{{ route('users.index') }}" class="nav-link @if(Route::currentRouteName() === 'users.index') active @endif">
               <i class="nav-icon fas fa-users"></i>
