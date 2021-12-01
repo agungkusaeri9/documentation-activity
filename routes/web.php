@@ -19,7 +19,7 @@ Route::redirect('/','/login');
 
 Auth::routes();
 
-Route::middleware('auth')->group(function () {
+Route::middleware('auth','isactive')->group(function () {
     Route::get('/', 'DashboardController@index')->name('dashboard');
     Route::resource('users', UserController::class)->except('show');
     Route::resource('contents', ContentController::class);

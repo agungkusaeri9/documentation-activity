@@ -31,7 +31,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link @if(Route::currentRouteName() === 'interships.photo-index' || Route::currentRouteName() === 'interships.video-index') active @endif">
+            <a href="#" class="nav-link @if(Route::currentRouteName() === 'contents.index' || Route::currentRouteName() === 'contents.create' || Route::currentRouteName() === 'contents.edit' ||Route::currentRouteName() === 'photo-galleries.index' || Route::currentRouteName() === 'video-galleries.index') active @endif">
               <i class="nav-icon fas fa-folder"></i>
               <p>
                Konten
