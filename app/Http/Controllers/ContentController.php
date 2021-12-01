@@ -71,7 +71,10 @@ class ContentController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('pages.content.show',[
+            'title' => 'Detail Konten',
+            'item' => Content::findOrFail($id)
+        ]);
     }
 
     /**

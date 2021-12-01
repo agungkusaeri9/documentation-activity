@@ -27,4 +27,7 @@ Route::middleware('auth','isactive')->group(function () {
     Route::resource('video-galleries', VideoGalleryController::class)->except('show','edit','update');
     Route::get('/profile', 'ProfileController@index')->name('profile');
     Route::patch('/profile', 'ProfileController@update')->name('profile.update');
+    Route::prefix('filemanager')->group( function () {
+        \UniSharp\LaravelFilemanager\Lfm::routes();
+    });
 });

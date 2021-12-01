@@ -37,7 +37,7 @@
                                     <th>Judul</th>
                                     <th>Kategori</th>
                                     <th>Link</th>
-                                    <th class="text-center" style="width:80px">Aksi</th>
+                                    <th class="text-center" style="width:120px">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -49,6 +49,7 @@
                                     <td>{{ $item->category }}</td>
                                     <td>{{ $item->link ?? 'Tidak Ada' }}</td>
                                     <td class="text-center">
+                                        <a href="{{ route('contents.show',$item->id) }}" class="btn btn-sm btn-warning text-white"><i class="fas fa-eye"></i></a>
                                         <a href="{{ route('contents.edit',$item->id) }}" class="btn btn-sm btn-info"><i class="fas fa-edit"></i></a>
                                         <form action="{{ route('contents.destroy',$item->id) }}" method="post" class="d-inline">
                                             @csrf
