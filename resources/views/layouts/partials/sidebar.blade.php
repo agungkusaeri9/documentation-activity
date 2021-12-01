@@ -2,7 +2,7 @@
     <!-- Brand Logo -->
     <a href="{{ route('dashboard') }}" class="brand-link">
       <img src="{{ asset('assets/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">ACTIVE</span>
     </a>
 
     <!-- Sidebar -->
@@ -23,72 +23,129 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('dashboard') }}" class="nav-link @if(Route::currentRouteName() === 'dashboard') active @endif">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
               </p>
             </a>
           </li>
-          <li class="nav-header">LABELS</li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tree"></i>
+            <a href="#" class="nav-link @if(Route::currentRouteName() === 'interships.photo-index' || Route::currentRouteName() === 'interships.video-index') active @endif">
+              <i class="nav-icon fas fa-folder"></i>
               <p>
-                UI Elements
+               Konten
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/UI/general.html" class="nav-link">
+                <a href="{{ route('contents.index') }}" class="nav-link @if(Route::currentRouteName() === 'contents.index') active @endif">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>General</p>
+                  <p>Semua Konten</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/UI/icons.html" class="nav-link">
+                <a href="{{ route('photo-galleries.index') }}" class="nav-link @if(Route::currentRouteName() === 'photo-galleries.index') active @endif">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Icons</p>
+                  <p>Galeri Foto</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/UI/buttons.html" class="nav-link">
+                <a href="{{ route('video-galleries.index') }}" class="nav-link @if(Route::currentRouteName() === 'video-galleries.index') active @endif">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Buttons</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/sliders.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Sliders</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/modals.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Modals & Alerts</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/navbar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Navbar & Tabs</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/timeline.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Timeline</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/ribbons.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ribbons</p>
+                  <p>Galeri Video</p>
                 </a>
               </li>
             </ul>
+          </li>
+          {{-- <li class="nav-item">
+            <a href="#" class="nav-link @if(Route::currentRouteName() === 'event.photo-index' || Route::currentRouteName() === 'event.video-index') active @endif">
+              <i class="nav-icon fas fa-folder"></i>
+              <p>
+                Event
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('event.photo-index') }}" class="nav-link @if(Route::currentRouteName() === 'event.photo-index') active @endif">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Galeri Foto</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('event.video-index') }}" class="nav-link @if(Route::currentRouteName() === 'event.video-index') active @endif">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Galeri Video</p>
+                </a>
+              </li>
+            </ul>
+          </li> --}}
+          {{-- <li class="nav-item">
+            <a href="#" class="nav-link link @if(Route::currentRouteName() === 'event.photo-index' || Route::currentRouteName() === 'event.video-index') active @endif">
+              <i class="nav-icon fas fa-folder"></i>
+              <p>
+                Event
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>
+                    Event Kami
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-dot-circle nav-icon"></i>
+                      <p>Galeri Foto</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-dot-circle nav-icon"></i>
+                      <p>Galeri Video</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>
+                    Kolaborasi Event
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-dot-circle nav-icon"></i>
+                      <p>Galeri Foto</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-dot-circle nav-icon"></i>
+                      <p>Galeri Video</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li> --}}
+          <li class="nav-item">
+            <a href="{{ route('users.index') }}" class="nav-link @if(Route::currentRouteName() === 'users.index') active @endif">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Admin
+              </p>
+            </a>
           </li>
         </ul>
       </nav>

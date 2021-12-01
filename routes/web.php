@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\IntershipController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -20,4 +21,8 @@ Auth::routes();
 
 Route::middleware('auth')->group(function () {
     Route::get('/', 'DashboardController@index')->name('dashboard');
+    Route::resource('users', UserController::class)->except('show');
+    Route::resource('contents', ContentController::class);
+    Route::resource('photo-galleries', PhotoGalleryController::class)->except('show');
+    Route::resource('video-galleries', VideoGalleryController::class)->except('show');
 });
