@@ -23,6 +23,7 @@ Route::middleware('auth','isactive')->group(function () {
     Route::get('/', 'DashboardController@index')->name('dashboard');
     Route::resource('users', UserController::class)->except('show');
     Route::resource('contents', ContentController::class);
+    Route::resource('contacts', ContactController::class);
     Route::resource('photo-galleries', PhotoGalleryController::class)->except('show','edit','update');
     Route::resource('video-galleries', VideoGalleryController::class)->except('show','edit','update');
     Route::get('/profile', 'ProfileController@index')->name('profile');

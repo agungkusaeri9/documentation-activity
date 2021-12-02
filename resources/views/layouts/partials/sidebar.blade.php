@@ -60,6 +60,23 @@
             </ul>
           </li>
           <li class="nav-item">
+            <a href="#" class="nav-link @if(Route::currentRouteName() === 'contacts.index' || Route::currentRouteName() === 'contacts.create' || Route::currentRouteName() === 'contacts.edit') active @endif">
+              <i class="nav-icon fas fa-folder"></i>
+              <p>
+               Master Data
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('contacts.index') }}" class="nav-link @if(Route::currentRouteName() === 'contacts.index') active @endif">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kontak</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
             <a href="{{ route('users.index') }}" class="nav-link @if(Route::currentRouteName() === 'users.index') active @endif">
               <i class="nav-icon fas fa-users"></i>
               <p>
